@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Calander</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-15">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../img/Logo.jpg" alt="" width="30" height="30" class="d-inline-block align-top">
+                            MTICS Organizer</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Google Calendar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Google Task</a>
+                                </li>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+
+        <br>
+    <div class="form">
+        <form action="http://localhost:3500/" method="POST">
+            <a class="button" target="_blank" rel="noopener noreferrer"
+                href="https://accounts.google.com/signin/oauth/consent?authuser=0&part=AJi8hANR96f7-T0iidM-yPPv_aaTJvDqQmp3M6tsN_9gH5P5pxVtS1Q0DFGdhoMnp2UrRwDYTIoTgMosNTRRnor0wcsycPqpLdmuYsgrCWFdLNnBkJzQDLD1YMxpXp35JzC1g1ulm6LJuRf5vWCca7w5dhsUCBOBCTfssUtw4r_Ovhx3JIAnUi03OkKOXs-QoAVYskmib76Ro2-2UVVpGrGkzZrbXtjSJXw2sY5YkjLw28gLLIfrfITX6W5naNHP0RYEMJyVjZgi5nWWRDV0pdNEf0xaaTIOhJIjT3xdjbmYcHunT4hKAqeeBIimmPWRe6RVJOtwRPiypECGbhi53lOWBpap5y6FYebuAy9FNP66cRQydbt2TL1LIov3Gq_eLbfeBaIjat_cGHwQpiQxUw7quHREb7u265bxV2ZJKZ1hBRmx4ywhcGPjPij5h3ekreEADk6mIiA3rcJJTMw8Cqr1SWpUnBVclmu8kZMTBNX5y_ZFKVx9IjSHXO5nxOd_vYz2O_JtK2h_sMjE2fvN5qmP2RMolbw2Cx6QKeibBdtKDh0HZw6BOOYhLaLcUCM4ZDO2qRpobDU6&hl=en&as=S-720625745%3A1615837973757380#">Sign In</a>
+            <span>You need to Sign In first</span><br><br>
+            <label for="token">Paste the copied token here</label>
+            <input name="token" type="text" placeholder="must be like this Jw65AJg05xiOGmkCld...">
+            <input type="submit" value="Get my events"></input>
+        </form>
+        <hr>
+        <form action="http://localhost:3500/events" method="POST">
+            <label for="attendee email">Attendee email</label>
+            <input type="email" name="to" placeholder="send email to...">
+            <label f    or="event title">Event Title</label>
+            <input type="text" name="summary" placeholder="the title of event...">
+            <label for="body">Event body</label>
+            <input type="text" name="description" placeholder="the message body...">
+            <input type="submit" value="Send Event Invite">
+        </form>
+    </div>
+</body>
+
+</html>
